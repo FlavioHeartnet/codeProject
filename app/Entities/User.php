@@ -1,6 +1,6 @@
 <?php
 
-namespace codeProject;
+namespace codeProject\Entities;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
