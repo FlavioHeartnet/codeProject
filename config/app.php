@@ -175,6 +175,7 @@ return [
          */
         codeProject\Providers\AppServiceProvider::class,
         codeProject\Providers\AuthServiceProvider::class,
+        codeProject\Providers\RepositoryProvider::class,
         // codeProject\Providers\BroadcastServiceProvider::class,
         codeProject\Providers\EventServiceProvider::class,
         codeProject\Providers\RouteServiceProvider::class,

@@ -10,7 +10,7 @@ use Prettus\Repository\Eloquent\BaseRepository;
  * Date: 20/10/2016
  * Time: 16:31
  */
-class ClientRepositoryEloquent extends BaseRepository
+class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
 {
 
     public function Model()
