@@ -2,6 +2,7 @@
 
 namespace codeProject\Services;
 use codeProject\Repositories\ClientRepository;
+use codeProject\Validators\Validator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ClientService
@@ -14,7 +15,7 @@ class ClientService
     private $validator;
 
 
-    public function __construct(ClientRepository $repository, ClientService $validator)
+    public function __construct(ClientRepository $repository, Validator $validator)
     {
         $this->repository = $repository;
         $this->validator = $validator;
