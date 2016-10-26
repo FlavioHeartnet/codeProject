@@ -24,7 +24,7 @@ $factory->define(codeProject\Entities\User::class, function (Faker\Generator $fa
 });
 
 $factory->define(codeProject\Entities\Client::class, function (Faker\Generator $faker) {
-    static $password;
+
 
     return [
         'name' => $faker->name,
@@ -33,6 +33,35 @@ $factory->define(codeProject\Entities\Client::class, function (Faker\Generator $
         'email' => $faker->unique()->safeEmail,
         'phone' => $faker->phoneNumber,
         'obs' => $faker->sentence,
+
+    ];
+});
+
+$factory->define(codeProject\Entities\Project::class, function (Faker\Generator $faker) {
+
+
+    return [
+        'owner_id' => rand(1,5),
+        'client_id'=>rand(1,12),
+        'name' => $faker->word,
+        'description' => $faker->sentence(),
+        'progress' => $faker->numberBetween(1,100),
+        'status' => $faker->numberBetween(1,3),
+        'due_date' => $faker->date("y-m-d")
+
+
+    ];
+});
+
+$factory->define(codeProject\Entities\ProjectNote::class, function (Faker\Generator $faker) {
+
+
+    return [
+        'project_id' => rand(1,12),
+        'contend' => $faker->sentence(),
+        'title' => $faker->word,
+        'note' => $faker->sentence()
+
 
     ];
 });
